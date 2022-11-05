@@ -1,0 +1,13 @@
+/* .pokemon-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.pokemon-grid {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

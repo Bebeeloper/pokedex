@@ -22,9 +22,19 @@ export interface Sprites {
 
 export interface Other {
   "official-artwork": OfficialArtwork;
+  home: Home;
+  dream_world: DreamWorld;
 }
 
 export interface OfficialArtwork {
+  front_default: string;
+}
+
+export interface Home{
+  front_default: string;
+}
+
+export interface DreamWorld{
   front_default: string;
 }
 

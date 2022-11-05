@@ -15,6 +15,12 @@ export class PokemonComponent implements OnInit {
       other: {
         "official-artwork": {
           front_default: ''
+        },
+        home: {
+          front_default: ''
+        },
+        dream_world: {
+          front_default: ''
         }
       }
     },
@@ -28,7 +34,10 @@ export class PokemonComponent implements OnInit {
     weight: 0
   }
 
-  constructor() { }
+  constructor() {
+    console.log("Types: ", this.pokemon.types[0].type);
+
+   }
 
   ngOnInit(): void {
   }
