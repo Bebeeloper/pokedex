@@ -9,7 +9,7 @@ import { Pokemon } from 'src/app/models/pokemon_model';
 export class PokemonComponent implements OnInit {
 
   @Input() pokemon: Pokemon = {
-    id: '',
+    id: 0,
     name: '',
     image: '',
     price: 0

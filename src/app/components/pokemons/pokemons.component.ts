@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon_model';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { Pokemons } from 'src/app/models/pokemon_model';
+import { Characters } from 'src/app/models/pokemon_model';
 
 @Component({
   selector: 'app-pokemons',
@@ -19,15 +20,12 @@ export class PokemonsComponent implements OnInit {
   ngOnInit(): void {
     this.pokemonService.getAllPokemons()
     .subscribe((data: Pokemons) => {
-      console.log(data.results[0].name);
-
       for (const pokemon of data.results) {
         this.pokemonService.getPokemonsEndpoints(pokemon.url)
-        .subscribe((dataEndpoints: any) => {
-          console.log(dataEndpoints);
+        .subscribe((dataEndpoints: Characters) => {
+          console.log(dataEndpoints.name);
         });
       }
-
     });
   }
 
