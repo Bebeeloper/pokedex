@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Characters, Pokemons } from '../models/pokemon_model';
+import { Pokemon, Pokemons } from '../models/pokemon_model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class PokemonService {
   }
 
   getPokemonsEndpoints(pokemonsEndpoints: string){
-    return this.http.get<Characters>(pokemonsEndpoints);
+    return this.http.get<Pokemon>(pokemonsEndpoints);
   }
 
 }

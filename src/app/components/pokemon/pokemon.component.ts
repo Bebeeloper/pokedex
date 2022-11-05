@@ -11,8 +11,21 @@ export class PokemonComponent implements OnInit {
   @Input() pokemon: Pokemon = {
     id: 0,
     name: '',
-    image: '',
-    price: 0
+    sprites: {
+      other: {
+        "official-artwork": {
+          front_default: ''
+        }
+      }
+    },
+    types: [{
+      type: {
+        name: '',
+        url: ''
+      }
+    }],
+    height: 0,
+    weight: 0
   }
 
   constructor() { }

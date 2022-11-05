@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Pokemon } from 'src/app/models/pokemon_model';
 import { PokemonService } from 'src/app/services/pokemon.service';
-import { Pokemons } from 'src/app/models/pokemon_model';
-import { Characters } from 'src/app/models/pokemon_model';
+import { Pokemon, Pokemons } from 'src/app/models/pokemon_model';
 
 @Component({
   selector: 'app-pokemons',
@@ -22,8 +20,11 @@ export class PokemonsComponent implements OnInit {
     .subscribe((data: Pokemons) => {
       for (const pokemon of data.results) {
         this.pokemonService.getPokemonsEndpoints(pokemon.url)
-        .subscribe((dataEndpoints: Characters) => {
-          console.log(dataEndpoints.name);
+        .subscribe((dataEndpoints: Pokemon) => {
+          // console.log(dataEndpoints.sprites.other['official-artwork'].front_default);
+          console.log(dataEndpoints);
+
+          this.pokemons.push(dataEndpoints);
         });
       }
     });
