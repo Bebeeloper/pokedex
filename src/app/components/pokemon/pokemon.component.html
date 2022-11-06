@@ -1,6 +1,8 @@
 <article class="pokemon-card-container">
   <h2>{{pokemon.name.charAt(0).toUpperCase()}}{{pokemon.name.slice(1)}}</h2>
-  <p *ngFor="let type of pokemon.types">{{type.type.name}}</p>
+  <div>
+    <a *ngFor="let type of pokemon.types">{{type.type.name}}</a>
+  </div>
   <figure class="pokemon-images-container">
     <img src="{{pokemon.sprites.other['official-artwork'].front_default}}" alt="">
     <img src="{{pokemon.sprites.other.home.front_default}}" alt="">
