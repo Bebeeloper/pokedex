@@ -35,13 +35,8 @@ export class PokemonComponent implements OnInit {
   }
 
   constructor() {
-<<<<<<< HEAD
-    // console.log("Types: ", this.pokemon.types[0].type);
-   }
-=======
     console.log("Types: ", this.pokemon.types[0].type);
-  }
->>>>>>> uichanges
+   }
 
   ngOnInit(): void {
   }

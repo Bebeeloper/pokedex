@@ -15,6 +15,7 @@ export class PokemonsComponent implements OnInit, OnChanges {
   pagNumber: number = 10;
   pageNumberAll: number = 1154;
   loading: boolean = false;
+  loader: boolean = false;
 
   constructor(
     private pokemonService: PokemonService
@@ -43,7 +44,10 @@ export class PokemonsComponent implements OnInit, OnChanges {
       for (const pokemon of data.results) {
         this.pokemonService.getPokemonsEndpoints(pokemon.url)
         .subscribe((dataEndpoints: Pokemon) => {
-          this.pokemonsArray.push(dataEndpoints);
+          setTimeout(() => {
+            this.pokemonsArray.push(dataEndpoints);
+            this.loader = true;
+          }, 5000);
         });
       }
     });

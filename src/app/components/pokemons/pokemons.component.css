@@ -1,7 +1,23 @@
-<<<<<<< HEAD
+.pokemon-loader {
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-loader figure {
+  width: 30rem;
+}
+
+.pokemon-loader figure img{
+  width: 100%;
+}
+
 .pokemon-grid {
   margin: 20px 0;
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 20rem;
@@ -91,24 +107,4 @@
     gap: 2rem;
   }
 
-=======
-/* .pokemon-grid {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
-/* .pokemon-grid {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-} */
-
-.pokemon-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1%;
->>>>>>> uichanges
 }

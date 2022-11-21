@@ -7,12 +7,20 @@
 <!--  -->
 <!--  -->
 <!-- <input  type="text" [(ngModel)]='contador' (ngModelChange)='filterName()'> -->
-<main class="pokemon-grid" infiniteScroll
-      [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50"
-      (scrolled)="onScroll()">
-  <app-pokemon *ngFor="let pokemon of pokemons; index as i" [pokemon]="pokemon"></app-pokemon>
+<main *ngIf="!loader; else loaderElse" class="pokemon-loader">
+  <figure>
+    <img src="assets/n1582649.gif" alt="pokemon git animation">
+  </figure>
+  <h1>Cargando...</h1>
 </main>
+<ng-template #loaderElse>
+  <main class="pokemon-grid" infiniteScroll
+        [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50"
+        (scrolled)="onScroll()">
+    <app-pokemon *ngFor="let pokemon of pokemons; index as i" [pokemon]="pokemon"></app-pokemon>
+  </main>
 
-<figure *ngIf="loading" class="pokeball-container">
-  <img src="assets/pokeball.png" alt="Pokeball">
-</figure>
+  <figure *ngIf="loading" class="pokeball-container">
+    <img src="assets/pokeball.png" alt="Pokeball">
+  </figure>
+</ng-template>

@@ -11,17 +11,10 @@ export class PokemonService {
     private http: HttpClient
   ) { }
 
-<<<<<<< HEAD
   getAllPokemons(pagNumber: number){
     // return this.http.get<Pokemons>('https://pokeapi.co/api/v2/pokemon?limit=1154');
     return this.http.get<Pokemons>('https://pokeapi.co/api/v2/pokemon?limit=' + pagNumber);
     // return this.http.get<Pokemons>('https://pokeapi.co/api/v2/pokemon');
-=======
-  getAllPokemons(){
-    // return this.http.get<Pokemons>('https://pokeapi.co/api/v2/pokemon?limit=1154');
-    return this.http.get<Pokemons>('https://pokeapi.co/api/v2/pokemon');
-    // return this.http.get<Pokemons>('https://pokeapi.co/api/v2/pokemon?limit=9');
->>>>>>> uichanges
   }
 
   getPokemonsEndpoints(pokemonsEndpoints: string){

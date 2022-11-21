@@ -1,18 +1,18 @@
-<<<<<<< HEAD
-app-pokemons {
+
+.pokemon-container {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-=======
-.pokemon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
->>>>>>> uichanges
 }
 
-.pokemon-container app-pokemons{
+.pokemon-container app-pokemons {
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+/*.pokemon-container app-pokemons{
+  width: 90%;
+} */
