@@ -1,0 +1,26 @@
+<!-- <article class="pokemon-card-container">
+  <h2>{{pokemon.name.charAt(0).toUpperCase()}}{{pokemon.name.slice(1)}}</h2>
+  <div>
+    <a *ngFor="let type of pokemon.types">{{type.type.name}}</a>
+  </div>
+  <figure class="pokemon-images-container">
+    <img src="{{pokemon.sprites.other['official-artwork'].front_default}}" alt="">
+    <img src="{{pokemon.sprites.other.home.front_default}}" alt="">
+    <img src="{{pokemon.sprites.other.dream_world.front_default}}" alt="">
+  </figure>
+</article> -->
+
+<article class="pokemon-card-container">
+  <div class="name-container">
+    <h2>{{pokemon.name.charAt(0).toUpperCase()}}{{pokemon.name.slice(1)}}</h2>
+    <h3>{{pokemon.id}}</h3>
+  </div>
+  <figure class="poke-image-container">
+    <img src="{{pokemon.sprites.other['official-artwork'].front_default}}" alt=""> <!--Official art-->
+    <!-- <img src="{{pokemon.sprites.other.home.front_default}}" alt=""> --> <!--3D art-->
+    <!-- <img src="{{pokemon.sprites.other.dream_world.front_default}}" alt=""> --> <!--Plain art-->
+  </figure>
+  <div class="type-container">
+    <a *ngFor="let type of pokemon.types">{{type.type.name}}</a>
+  </div>
+</article>
