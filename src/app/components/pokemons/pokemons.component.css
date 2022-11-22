@@ -1,16 +1,15 @@
 .pokemon-loader {
-  width: 90vh;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  background-color: aqua;
 }
 
 .pokemon-loader figure {
-  width: 30rem;
+  width: 80%;
+  max-width: 30rem;
 }
 
 .pokemon-loader figure img{
@@ -21,7 +20,7 @@
   margin: 20px 0;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(12rem, 20rem));
   grid-auto-rows: 20rem;
   gap: 2rem;
 }

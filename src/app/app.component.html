@@ -1,3 +1,6 @@
-<div class="pokemon-container">
-  <app-pokemons></app-pokemons>
+<!-- <button (click)="darkLightMode()"></button> -->
+<div (click)="darkLightMode()" [ngClass]="!darkToggle ? 'light' : 'dark'">
+  <div class="pokemon-container">
+    <app-pokemons></app-pokemons>
+  </div>
 </div>

@@ -29,17 +29,17 @@
 }
 
 .pokemon-card-container .poke-image-container{
-  width: 100%;
-  height: 9rem;
+  width: 10rem;
+  height: 10rem;
   display: flex;
-  /* justify-content: center; */
-  place-content: center;
+  justify-content: center;
   align-items: center;
+  align-self: center;
 }
 
 .pokemon-card-container .poke-image-container img{
-  width: 10rem;
-  height: 10rem;
+  width: 100%;
+  height: 100%;
 }
 
 .pokemon-card-container .type-container {

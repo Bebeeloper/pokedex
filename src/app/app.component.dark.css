@@ -1,0 +1,6 @@
+button {
+  z-index: 1000;
+}
+.dark {
+  background-color: black;
+}

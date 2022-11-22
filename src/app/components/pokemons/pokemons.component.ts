@@ -12,20 +12,30 @@ export class PokemonsComponent implements OnInit, OnChanges {
 
   pokemons: Pokemon[] = [];
   pokemonsArray: Pokemon[] = [];
-  pagNumber: number = 10;
+  pagNumber: number = 0;
+  pag: number = 0;
   pageNumberAll: number = 1154;
   loading: boolean = false;
   loader: boolean = false;
 
+  public innerWidth: any;
+
   constructor(
     private pokemonService: PokemonService
-  ) { }
+  ) {
+    this.innerWidth = window.innerWidth;
+    this.pagNumber = this.innerWidth < 1024 ? 10 : 20;
+    this.pag = this.pagNumber;
+    console.log('Innerwidth desde el constructor: ', this.innerWidth);
+    console.log('PagNumber desde el constructor: ', this.pagNumber);
+  }
 
   ngOnChanges(changes: SimpleChanges) :void{
     console.log(changes);
   }
 
   ngOnInit(): void {
+
     this.pokemonService.getAllPokemons(this.pagNumber)
     .subscribe((data: Pokemons) => {
       for (const pokemon of data.results) {
@@ -57,8 +67,8 @@ export class PokemonsComponent implements OnInit, OnChanges {
   onScroll() {
     this.loading = true;
     let previousPageNumber: number = 0;
-    this.pagNumber = this.pagNumber + 10;
-    previousPageNumber = this.pagNumber - 10;
+    this.pagNumber = this.pagNumber + this.pag;
+    previousPageNumber = this.pagNumber - this.pag;
 
     console.log('Page number: ', this.pagNumber);
     console.log('previousPageNumber: ', previousPageNumber);
